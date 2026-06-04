@@ -4,74 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raj Campus Connect - Admission Guidance & Career Counseling</title>
-    <!-- Built-in Custom CSS to Ensure Layout & Colors Load Everywhere Instantly -->
+    <!-- Stable Native CSS Architecture for Eye-Catchy Design -->
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f3f4f6; color: #1f2937; line-height: 1.5; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; line-height: 1.5; }
         
-        /* Navigation */
-        nav { background-color: #1e3a8a; color: white; padding: 15px; position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; items-center; }
+        /* Premium Navbar */
+        nav { background-color: #1e3a8a; color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; items: center; }
         .logo-box { display: flex; items-center; gap: 12px; }
         .logo-circle { width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fbbf24; background-color: #172554; display: flex; items-center; justify-content: center; position: relative; }
-        .logo-arrow { position: absolute; bottom: 4px; right: 4px; background-color: #f59e0b; color: #1e3a8a; font-size: 8px; font-weight: 900; padding: 1px 3px; border-radius: 2px; }
+        .logo-arrow { position: absolute; bottom: 3px; right: 3px; background-color: #f59e0b; color: #1e3a8a; font-size: 8px; font-weight: 900; padding: 0px 3px; border-radius: 2px; }
         .text-stack { display: flex; flex-direction: column; }
-        .text-brand-1 { font-size: 14px; font-weight: 900; letter-spacing: 1px; color: white; line-height: 1; }
+        .text-brand-1 { font-size: 13px; font-weight: 900; letter-spacing: 1px; color: white; line-height: 1; }
         .text-brand-2 { font-size: 16px; font-weight: 900; letter-spacing: 2px; color: #fbbf24; line-height: 1.2; }
-        .text-slogan { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: #d1d5db; text-transform: uppercase; margin-top: 2px; }
+        .text-slogan { font-size: 8px; font-weight: 700; letter-spacing: 1.5px; color: #cbd5e1; text-transform: uppercase; margin-top: 2px; }
         .nav-links { display: flex; gap: 24px; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .nav-links a { color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
         .nav-links a:hover { color: #fbbf24; }
-        .btn-whatsapp { background-color: #22c55e; color: white; font-weight: 600; padding: 8px 16px; border-radius: 9999px; text-decoration: none; font-size: 12px; display: flex; items-center; gap: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-whatsapp { background-color: #22c55e; color: white; font-weight: 700; padding: 10px 18px; border-radius: 20px; text-decoration: none; font-size: 12px; transition: background 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .btn-whatsapp:hover { background-color: #16a34a; }
 
-        /* Hero Section */
-        header { background: linear-gradient(to right, #1e3a8a, #4338ca); color: white; padding: 80px 20px; text-center; text-align: center; }
-        .hero-badge { background-color: #f59e0b; color: #1e3a8a; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; display: inline-block; }
-        header h1 { font-size: 36px; font-weight: 700; margin-top: 16px; line-height: 1.2; }
-        header p { color: #d1d5db; margin-top: 16px; font-size: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .hero-btns { margin-top: 32px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .btn-primary { background-color: #f59e0b; color: #1e3a8a; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.15); transition: background 0.2s; }
+        /* Premium Hero Section */
+        header { background: linear-gradient(135deg, #1e3a8a, #3730a3); color: white; padding: 80px 20px; text-align: center; }
+        .hero-badge { background-color: #f59e0b; color: #1e3a8a; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; text-transform: uppercase; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        header h1 { font-size: 36px; font-weight: 800; margin-top: 18px; line-height: 1.3; }
+        header p { color: #e2e8f0; margin-top: 14px; font-size: 16px; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .hero-btns { margin-top: 30px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-primary { background-color: #f59e0b; color: #1e3a8a; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 12px rgba(245,158,11,0.3); transition: background 0.2s; }
         .btn-primary:hover { background-color: #d97706; }
-        .btn-outline { border: 1px solid white; color: white; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+        .btn-outline { border: 1px solid white; color: white; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
         .btn-outline:hover { background-color: white; color: #1e3a8a; }
 
-        /* Sections Grid Layout */
-        .section-title { font-size: 28px; font-weight: 700; text-align: center; color: #1e3a8a; margin-bottom: 8px; }
-        .section-subtitle { text-align: center; color: #6b7280; font-size: 14px; margin-bottom: 48px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        /* Section Layout Wrappers */
+        .main-wrapper { max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        .section-title { font-size: 28px; font-weight: 700; color: #1e3a8a; margin-bottom: 8px; }
+        .section-subtitle { color: #64748b; font-size: 14px; margin-bottom: 44px; }
         
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-        .card { background-color: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; text-align: center; }
-        .card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin: 12px 0 8px 0; }
-        .card p { color: #4b5563; font-size: 13px; }
+        /* Modern Services Layout */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; width: 100%; }
+        .service-card { background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; text-align: center; }
+        .service-card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin: 14px 0 8px 0; }
+        .service-card p { color: #475569; font-size: 13px; }
 
-        /* Courses Grid */
-        .bg-gray-section { background-color: #f3f4f6; }
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-w: 1100px; margin: 0 auto; }
-        .course-card { background-color: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #1e3a8a; display: flex; flex-direction: column; }
-        .course-card h3 { font-size: 16px; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; }
-        .course-card ul { list-style: none; }
-        .course-card li { font-size: 13px; color: #4b5563; margin-bottom: 6px; font-weight: 500; }
-        .sub-header-bold { font-weight: 700; color: #1e3a8a; margin-top: 8px; margin-bottom: 4px; }
+        /* Premium Eye-Catchy Course Grid System */
+        .courses-section { background-color: #f1f5f9; padding: 60px 20px; width: 100%; display: block; }
+        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+        .course-card { background: white; padding: 26px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid #1e3a8a; text-align: left; display: flex; flex-direction: column; justify-content: flex-start; }
+        .course-card h3 { font-size: 17px; font-weight: 700; color: #1e3a8a; margin-bottom: 14px; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px; }
+        .course-card ul { list-style: none; width: 100%; }
+        .course-card li { font-size: 13px; color: #475569; margin-bottom: 8px; font-weight: 500; line-height: 1.4; }
+        .sub-header-bold { font-weight: 700; color: #1e3a8a; margin-top: 12px; margin-bottom: 6px; display: block; border-left: 3px solid #f59e0b; padding-left: 6px; }
 
-        /* Lead Form */
-        .form-container { max-width: 500px; margin: 0 auto; background-color: white; padding: 32px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; }
-        .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #4b5563; margin-bottom: 4px; letter-spacing: 0.5px; }
-        .form-group input { w-width: 100%; width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; outline: none; }
-        .form-group input:focus { border-color: #1e3a8a; }
-        .btn-submit { width: 100%; background-color: #1e3a8a; color: white; font-weight: 700; padding: 12px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        /* Dynamic High-Converting Form */
+        .form-section { background-color: white; padding: 60px 20px; width: 100%; display: block; }
+        .form-box { max-width: 500px; margin: 0 auto; background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; text-align: center; }
+        .form-box h2 { font-size: 24px; font-weight: 700; color: #1e3a8a; margin-bottom: 4px; }
+        .form-box p { color: #64748b; font-size: 13px; margin-bottom: 28px; }
+        .form-group { margin-bottom: 18px; text-align: left; }
+        .form-group label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .form-group input { width: 100%; padding: 13px 16px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; background-color: #f8fafc; transition: all 0.2s; }
+        .form-group input:focus { border-color: #1e3a8a; background-color: white; box-shadow: 0 0 0 3px rgba(30,58,138,0.08); }
+        .btn-submit { width: 100%; background-color: #1e3a8a; color: white; font-weight: 700; padding: 14px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 10px rgba(30,58,138,0.2); }
         .btn-submit:hover { background-color: #1d4ed8; }
 
         /* Footer */
-        footer { background-color: #1e3a8a; color: #9ca3af; text-align: center; padding: 24px; font-size: 12px; border-t: 1px solid #1e40af; }
+        footer { background-color: #1e3a8a; color: #94a3b8; text-align: center; padding: 24px 20px; font-size: 12px; border-top: 1px solid #1e40af; }
 
-        /* Mobile Breakpoints */
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             header h1 { font-size: 26px; }
             header p { font-size: 14px; }
+            .section-title { font-size: 24px; }
+            .courses-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -80,7 +86,6 @@
     <!-- NAVIGATION BAR -->
     <nav>
         <div class="nav-container">
-            <!-- LIVE HTML LOGO (FIRST OPTION) -->
             <div class="logo-box">
                 <div class="logo-circle">
                     <span style="font-size: 20px;">🎓</span>
@@ -92,7 +97,6 @@
                     <span class="text-slogan">Study • Guide • Achieve</span>
                 </div>
             </div>
-            <!-- Nav Links -->
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
@@ -117,42 +121,25 @@
     </header>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="container">
+    <div id="services" class="main-wrapper">
         <h2 class="section-title">Humari Services (Our Services)</h2>
         <div class="section-subtitle">Aapke bright career ke liye sahi guidance</div>
         <div class="services-grid">
-            <div class="card">
-                <div style="font-size: 30px;">🎓</div>
+            <div class="service-card">
+                <div style="font-size: 32px;">🎓</div>
                 <h3>Free Counseling</h3>
                 <p>Aapke interest aur budget ke hisab se sahi course chunne mein madad.</p>
             </div>
-            <div class="card">
-                <div style="font-size: 30px;">🏛️</div>
+            <div class="service-card">
+                <div style="font-size: 32px;">🏛️</div>
                 <h3>Direct Admission</h3>
                 <p>Top private universities aur institutes mein secure admission guidance.</p>
             </div>
-            <div class="card">
-                <div style="font-size: 30px;">💰</div>
+            <div class="service-card">
+                <div style="font-size: 32px;">💰</div>
                 <h3>Scholarship Help</h3>
                 <p>Merit aur category ke aadhar par fees mein discounts dilwana.</p>
             </div>
-            <div class="card">
-                <div style="font-size: 30px;">📑</div>
+            <div class="service-card">
+                <div style="font-size: 32px;">📑</div>
                 <h3>Loan Assistance</h3>
-                <p>Education loan ke liye sahi guidance aur documents ready karwana.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- COURSES SECTION -->
-    <section id="courses" style="background-color: #f3f4f6; padding: 60px 20px;">
-        <h2 class="section-title">Our Top Programs & Faculties</h2>
-        <div class="section-subtitle" style="margin-bottom: 40px;">Usha Martin University ke sabhi job-oriented courses ki sahi jankari</div>
-        
-        <div class="courses-grid">
-            <!-- 1. Engineering & Applied Sciences -->
-            <div class="course-card">
-                <h3>🛠️ Engineering & Applied Sciences</h3>
-                <ul>
-                    <li>• B.Tech (CS / Mechanical / Mining / Civil / EE / ECE)</li>
-                    <li>• B.Tech LE (CS / Mechanical / Mining / Civil)</li>
