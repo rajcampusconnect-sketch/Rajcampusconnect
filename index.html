@@ -5,57 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raj Campus Connect - Admission Guidance & Career Counseling</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.5; }
-        nav { background-color: #1e3a8a; color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        body { background-color: #f8fafc; color: #1e293b; }
+        nav { background-color: #1e3a8a; color: white; padding: 15px; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; items: center; }
         .logo-box { display: flex; items-center; gap: 12px; }
         .logo-circle { width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fbbf24; background-color: #172554; display: flex; items-center; justify-content: center; position: relative; }
         .logo-arrow { position: absolute; bottom: 3px; right: 3px; background-color: #f59e0b; color: #1e3a8a; font-size: 8px; font-weight: 900; padding: 0px 3px; border-radius: 2px; }
         .text-stack { display: flex; flex-direction: column; }
         .text-brand-1 { font-size: 13px; font-weight: 900; color: white; line-height: 1; }
-        .text-brand-2 { font-size: 16px; font-weight: 900; color: #fbbf24; line-height: 1.2; letter-spacing: 1px; }
+        .text-brand-2 { font-size: 16px; font-weight: 900; color: #fbbf24; line-height: 1.2; }
         .text-slogan { font-size: 8px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; margin-top: 2px; }
         .nav-links { display: flex; gap: 24px; align-items: center; }
         .nav-links a { color: white; text-decoration: none; font-size: 14px; font-weight: 600; }
-        .btn-whatsapp { background-color: #22c55e; color: white; font-weight: 700; padding: 10px 18px; border-radius: 20px; text-decoration: none; font-size: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn-whatsapp { background-color: #22c55e; color: white; font-weight: 700; padding: 10px 18px; border-radius: 20px; text-decoration: none; font-size: 12px; }
         header { background: linear-gradient(135deg, #1e3a8a, #3730a3); color: white; padding: 80px 20px; text-align: center; }
         .hero-badge { background-color: #f59e0b; color: #1e3a8a; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; text-transform: uppercase; display: inline-block; }
         header h1 { font-size: 34px; font-weight: 800; margin-top: 18px; line-height: 1.3; }
-        header p { color: #e2e8f0; margin-top: 14px; font-size: 16px; max-width: 750px; margin-auto: 0 auto; }
-        .hero-btns { margin-top: 30px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .btn-primary { background-color: #f59e0b; color: #1e3a8a; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 12px rgba(245,158,11,0.3); }
-        .btn-outline { border: 1px solid white; color: white; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
-        .main-wrapper { max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        .section-title { font-size: 28px; font-weight: 700; color: #1e3a8a; margin-bottom: 8px; }
-        .section-subtitle { color: #64748b; font-size: 14px; margin-bottom: 44px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-        .service-card { background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
-        .service-card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin: 14px 0 8px 0; }
+        header p { color: #e2e8f0; margin-top: 14px; font-size: 16px; max-width: 750px; margin: 0 auto; }
+        .hero-btns { margin-top: 30px; display: flex; justify-content: center; gap: 16px; }
+        .btn-primary { background-color: #f59e0b; color: #1e3a8a; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; display: inline-block; }
+        .btn-outline { border: 1px solid white; color: white; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; display: inline-block; }
+        .section-title { font-size: 28px; font-weight: 700; color: #1e3a8a; margin-bottom: 8px; text-align: center; }
+        .section-subtitle { color: #64748b; font-size: 14px; margin-bottom: 40px; text-align: center; }
+        .services-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto; padding: 0 20px 50px 20px; }
+        .service-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; width: 260px; text-align: center; }
+        .service-card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin: 12px 0; }
         .service-card p { color: #475569; font-size: 13px; }
-        .courses-section { background-color: #f1f5f9; padding: 60px 20px; }
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
-        .course-card { background: white; padding: 24px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid #1e3a8a; text-align: left; }
-        .course-card h3 { font-size: 16px; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px; }
-        .course-card ul { list-style: none; }
-        .course-card li { font-size: 13px; color: #475569; margin-bottom: 6px; font-weight: 500; }
-        .sub-header-bold { font-weight: 700; color: #1e3a8a; margin-top: 10px; margin-bottom: 4px; display: block; border-left: 3px solid #f59e0b; padding-left: 6px; }
-        .form-section { background-color: white; padding: 60px 20px; }
-        .form-box { max-width: 500px; margin: 0 auto; background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; text-align: center; }
-        .form-box h2 { font-size: 24px; font-weight: 700; color: #1e3a8a; margin-bottom: 4px; }
+        
+        /* Fixed Horizontal Block List System */
+        .courses-section { background-color: #f1f5f9; padding: 60px 20px; width: 100%; }
+        .courses-list-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+        .course-block-card { background: white; padding: 26px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-left: 6px solid #1e3a8a; width: 100%; text-align: left; }
+        .course-block-card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin-bottom: 14px; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px; }
+        .course-block-card ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px; }
+        .course-block-card li { font-size: 13px; color: #475569; font-weight: 500; line-height: 1.4; }
+        .bold-sub { font-weight: 700; color: #1e3a8a; grid-column: 1 / -1; margin-top: 10px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 4px; }
+
+        .form-section { background-color: white; padding: 60px 20px; width: 100%; text-align: center; }
+        .form-box { max-width: 480px; margin: 0 auto; background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+        .form-box h2 { font-size: 24px; font-weight: 700; color: #1e3a8a; margin-bottom: 6px; }
         .form-box p { color: #64748b; font-size: 13px; margin-bottom: 24px; }
         .form-group { margin-bottom: 18px; text-align: left; }
         .form-group label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569; margin-bottom: 6px; }
         .form-group input { width: 100%; padding: 13px 16px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; background-color: #f8fafc; }
-        .form-group input:focus { border-color: #1e3a8a; background-color: white; }
-        .btn-submit { width: 100%; background-color: #1e3a8a; color: white; font-weight: 700; padding: 14px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; font-weight: 700; }
+        .btn-submit { width: 100%; background-color: #1e3a8a; color: white; font-weight: 700; padding: 14px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; }
         footer { background-color: #1e3a8a; color: #94a3b8; text-align: center; padding: 24px 20px; font-size: 12px; }
-        @media (max-width: 768px) { .nav-links { display: none; } header h1 { font-size: 26px; } .courses-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } header h1 { font-size: 26px; .course-block-card ul { grid-template-columns: 1fr; } } }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
     <nav>
         <div class="nav-container">
             <div class="logo-box">
@@ -70,53 +70,58 @@
             <a href="https://wa.me" target="_blank" class="btn-whatsapp">💬 WhatsApp Chat</a>
         </div>
     </nav>
-    <!-- HERO -->
+
     <header id="home">
         <span class="hero-badge">Best Career Guide</span>
         <h1>Confused After 12th?<br>Sahi College Aur Course Chunne Mein Hum Karenge Madad!</h1>
         <p>Top private universities mein Direct Admission, Scholarships aur Placement ki sahi aur sachi jankari.</p>
         <div class="hero-btns"><a href="#apply" class="btn-primary">Free Counseling Form</a><a href="tel:+918789364490" class="btn-outline">Call Now</a></div>
     </header>
-    <!-- SERVICES -->
-    <div id="services" class="main-wrapper">
+
+    <div id="services" style="padding-top: 50px;">
         <h2 class="section-title">Humari Services</h2>
         <div class="section-subtitle">Aapke bright career ke liye sahi guidance</div>
-        <div class="services-grid">
-            <div class="service-card"><div>🎓</div><h3>Free Counseling</h3><p>Sahi course chunne mein poori madad.</p></div>
-            <div class="service-card"><div>🏛️</div><h3>Direct Admission</h3><p>Top private universities mein secure admission.</p></div>
-            <div class="service-card"><div>💰</div><h3>Scholarship Help</h3><p>Merit ke aadhar par fees mein discounts dilwana.</p></div>
-            <div class="service-card"><div>📑</div><h3>Loan Assistance</h3><p>Education loan ke liye guidance aur documents ready karwana.</p></div>
-        </div>
     </div>
-    <!-- COURSES (ALL 145+ PROGRAMS INTEGRATED IN CLEAN GRID CARDS) -->
+    <div class="services-container">
+        <div class="service-card"><div>🎓</div><h3>Free Counseling</h3><p>Sahi course chunne mein poori madad.</p></div>
+        <div class="service-card"><div>🏛️</div><h3>Direct Admission</h3><p>Top private universities mein secure admission.</p></div>
+        <div class="service-card"><div>💰</div><h3>Scholarship Help</h3><p>Merit ke aadhar par fees mein discounts dilwana.</p></div>
+        <div class="service-card"><div>📑</div><h3>Loan Assistance</h3><p>Education loan ke liye guidance aur documents ready karwana.</p></div>
+    </div>
+
+    <!-- MAIN COURSES BLOCK LIST (FIXED LOOP) -->
     <div id="courses" class="courses-section">
-        <h2 class="section-title" style="text-align: center;">Our Top Programs & Faculties</h2>
-        <div class="section-subtitle" style="text-align: center;">Usha Martin University ke sabhi job-oriented courses ki sahi jankari</div>
-        <div class="courses-grid">
-            <div class="course-card">
+        <h2 class="section-title">Our Top Programs & Faculties</h2>
+        <div class="section-subtitle">Usha Martin University ke sabhi job-oriented courses ki sahi jankari</div>
+        <div class="courses-list-container">
+            
+            <!-- 1. Engineering & Applied Sciences -->
+            <div class="course-block-card">
                 <h3>🛠️ Engineering & Applied Sciences</h3>
                 <ul>
-                    <li>• B.Tech (CS / Mechanical / Mining / Civil / EE / ECE)</li>
+                    <li>• B.Tech (Computer Science & Engineering)</li>
+                    <li>• B.Tech (Mechanical / Mining / Civil / EE / ECE)</li>
                     <li>• B.Tech LE (CS / Mechanical / Mining / Civil)</li>
-                    <li>• B.Tech Civil (Highway & Mobility / High-Rise Design)</li>
-                    <li>• B.Tech Mech (Embedded System / EV Design & Prod.)</li>
-                    <li>• B.Tech (AI & ML / Cyber Security / Data Science)</li>
+                    <li>• B.Tech Civil (Highway & Mobility Design)</li>
+                    <li>• B.Tech Civil (High-Rise Building Design)</li>
+                    <li>• B.Tech Mech (Embedded System Design)</li>
+                    <li>• B.Tech Mech (EV Design & Production)</li>
+                    <li>• B.Tech (Artificial Intelligence & Machine Learning)</li>
+                    <li>• B.Tech (Cyber Security) | B.Tech (Data Science)</li>
                     <li>• Diploma Polytech (CS / Civil / EE / ECE / ME / Mining)</li>
-                    <li>• Diploma LE (CS / Civil / EE / ECE / ME)</li>
+                    <li>• Diploma Lateral Entry (CS / Civil / EE / ECE / ME)</li>
                 </ul>
             </div>
-            <div class="course-card">
-                <h3>💼 Management & Commerce</h3>
+
+            <!-- 2. Computing & Information Technology (IBM/TCS COMPLETE EXTRA DATA ADDED) -->
+            <div class="course-block-card">
+                <h3>💻 Computing & Information Technology</h3>
                 <ul>
-                    <li>• Bachelor of Business Administration (BBA) | BBA (Hons)</li>
-                    <li>• BBA (Business Intelligence & Data Analytics)</li>
-                    <li>• BBA (Banking, Finance & Insurance)</li>
-                    <li>• Master of Business Administration (MBA)</li>
-                    <li>• MBA (Business Intelligence & Data Analytics)</li>
-                    <li class="sub-header-bold">• Faculty of Commerce:</li>
-                    <li>• B.Com | B.Com (Hons) | Accountancy & Taxation</li>
-                </ul>
-            </div>
-            <div class="course-card">
-                <h3>💻 Computing & Info Tech</h3>
-                <ul>
+                    <li>• Bachelor of Computer Application (BCA)</li>
+                    <li>• BCA (Hons)</li>
+                    <li>• BCA - Blockchain Technology (TCS/IBM Collaboration)</li>
+                    <li>• BCA - Mobile Computing</li>
+                    <li>• BCA - Cyber Security</li>
+                    <li>• BCA - Graphic and Gaming AR/VR</li>
+                    <li>• Master of Computer Application (MCA)</li>
+                    <li>• MCA - Data Science Specialization</li>
