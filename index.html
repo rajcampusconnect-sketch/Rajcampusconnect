@@ -4,153 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raj Campus Connect - Admission Guidance & Career Counseling</title>
-    <!-- Standard Tailwind CSS CDN -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Google Fonts Link for Poppins -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Built-in Custom CSS to Ensure Layout & Colors Load Everywhere Instantly -->
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f3f4f6; color: #1f2937; line-height: 1.5; }
+        
+        /* Navigation */
+        nav { background-color: #1e3a8a; color: white; padding: 15px; position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; items-center; }
+        .logo-box { display: flex; items-center; gap: 12px; }
+        .logo-circle { width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fbbf24; background-color: #172554; display: flex; items-center; justify-content: center; position: relative; }
+        .logo-arrow { position: absolute; bottom: 4px; right: 4px; background-color: #f59e0b; color: #1e3a8a; font-size: 8px; font-weight: 900; padding: 1px 3px; border-radius: 2px; }
+        .text-stack { display: flex; flex-direction: column; }
+        .text-brand-1 { font-size: 14px; font-weight: 900; letter-spacing: 1px; color: white; line-height: 1; }
+        .text-brand-2 { font-size: 16px; font-weight: 900; letter-spacing: 2px; color: #fbbf24; line-height: 1.2; }
+        .text-slogan { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: #d1d5db; text-transform: uppercase; margin-top: 2px; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .nav-links a:hover { color: #fbbf24; }
+        .btn-whatsapp { background-color: #22c55e; color: white; font-weight: 600; padding: 8px 16px; border-radius: 9999px; text-decoration: none; font-size: 12px; display: flex; items-center; gap: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-whatsapp:hover { background-color: #16a34a; }
+
+        /* Hero Section */
+        header { background: linear-gradient(to right, #1e3a8a, #4338ca); color: white; padding: 80px 20px; text-center; text-align: center; }
+        .hero-badge { background-color: #f59e0b; color: #1e3a8a; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; display: inline-block; }
+        header h1 { font-size: 36px; font-weight: 700; margin-top: 16px; line-height: 1.2; }
+        header p { color: #d1d5db; margin-top: 16px; font-size: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-btns { margin-top: 32px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-primary { background-color: #f59e0b; color: #1e3a8a; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.15); transition: background 0.2s; }
+        .btn-primary:hover { background-color: #d97706; }
+        .btn-outline { border: 1px solid white; color: white; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+        .btn-outline:hover { background-color: white; color: #1e3a8a; }
+
+        /* Sections Grid Layout */
+        .section-title { font-size: 28px; font-weight: 700; text-align: center; color: #1e3a8a; margin-bottom: 8px; }
+        .section-subtitle { text-align: center; color: #6b7280; font-size: 14px; margin-bottom: 48px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+        .card { background-color: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; text-align: center; }
+        .card h3 { font-size: 18px; font-weight: 700; color: #1e3a8a; margin: 12px 0 8px 0; }
+        .card p { color: #4b5563; font-size: 13px; }
+
+        /* Courses Grid */
+        .bg-gray-section { background-color: #f3f4f6; }
+        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-w: 1100px; margin: 0 auto; }
+        .course-card { background-color: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #1e3a8a; display: flex; flex-direction: column; }
+        .course-card h3 { font-size: 16px; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; }
+        .course-card ul { list-style: none; }
+        .course-card li { font-size: 13px; color: #4b5563; margin-bottom: 6px; font-weight: 500; }
+        .sub-header-bold { font-weight: 700; color: #1e3a8a; margin-top: 8px; margin-bottom: 4px; }
+
+        /* Lead Form */
+        .form-container { max-width: 500px; margin: 0 auto; background-color: white; padding: 32px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #4b5563; margin-bottom: 4px; letter-spacing: 0.5px; }
+        .form-group input { w-width: 100%; width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; outline: none; }
+        .form-group input:focus { border-color: #1e3a8a; }
+        .btn-submit { width: 100%; background-color: #1e3a8a; color: white; font-weight: 700; padding: 12px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn-submit:hover { background-color: #1d4ed8; }
+
+        /* Footer */
+        footer { background-color: #1e3a8a; color: #9ca3af; text-align: center; padding: 24px; font-size: 12px; border-t: 1px solid #1e40af; }
+
+        /* Mobile Breakpoints */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            header h1 { font-size: 26px; }
+            header p { font-size: 14px; }
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
     <!-- NAVIGATION BAR -->
-    <nav class="bg-blue-900 text-white p-3 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            
-            <!-- LIVE HTML LOGO -->
-            <div class="flex items-center gap-3 select-none">
-                <!-- Circular Icon Badge -->
-                <div class="relative w-12 h-12 rounded-full border-2 border-amber-400 bg-blue-950 flex items-center justify-center shadow-inner">
-                    <span class="text-xl">🎓</span>
-                    <!-- Small Upward Arrow -->
-                    <div class="absolute bottom-1 right-1 bg-amber-500 text-[8px] text-blue-900 font-extrabold px-1 rounded-sm leading-tight shadow">▲</div>
+    <nav>
+        <div class="nav-container">
+            <!-- LIVE HTML LOGO (FIRST OPTION) -->
+            <div class="logo-box">
+                <div class="logo-circle">
+                    <span style="font-size: 20px;">🎓</span>
+                    <div class="logo-arrow">▲</div>
                 </div>
-                <!-- Branding Text Stack -->
-                <div class="flex flex-col">
-                    <span class="text-sm font-black tracking-wider leading-none text-white">RAJ CAMPUS</span>
-                    <span class="text-base font-black tracking-widest leading-tight text-amber-400">CONNECT</span>
-                    <span class="text-[8px] font-bold tracking-widest text-gray-300 uppercase leading-none mt-0.5">Study • Guide • Achieve</span>
+                <div class="text-stack">
+                    <span class="text-brand-1">RAJ CAMPUS</span>
+                    <span class="text-brand-2">CONNECT</span>
+                    <span class="text-slogan">Study • Guide • Achieve</span>
                 </div>
             </div>
-
             <!-- Nav Links -->
-            <div class="hidden md:flex space-x-6 text-sm">
-                <a href="#home" class="hover:text-amber-400 transition">Home</a>
-                <a href="#services" class="hover:text-amber-400 transition">Services</a>
-                <a href="#courses" class="hover:text-amber-400 transition">Courses</a>
-                <a href="#apply" class="hover:text-amber-400 transition">Apply Now</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#courses">Courses</a>
+                <a href="#apply">Apply Now</a>
             </div>
-            <a href="https://wa.me" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-full text-xs flex items-center gap-1 transition shadow">
+            <a href="https://wa.me" target="_blank" class="btn-whatsapp">
                 💬 WhatsApp Chat
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header id="home" class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="bg-amber-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Best Career Guide</span>
-            <h1 class="text-3xl md:text-5xl font-bold mt-4 leading-tight">Confused After 12th?<br>Sahi College Aur Course Chunne Mein Hum Karenge Madad!</h1>
-            <p class="text-gray-300 mt-4 text-sm md:text-base">Top private universities mein Direct Admission, Scholarships aur Placement ki sahi aur sachi jankari.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#apply" class="bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold px-8 py-3 rounded-lg shadow-lg transition">Free Counseling Form</a>
-                <a href="tel:+918789364490" class="border border-white hover:bg-white hover:text-blue-900 font-bold px-8 py-3 rounded-lg transition">Call Now: 8789364490</a>
-            </div>
+    <header id="home">
+        <span class="hero-badge">Best Career Guide</span>
+        <h1>Confused After 12th?<br>Sahi College Aur Course Chunne Mein Hum Karenge Madad!</h1>
+        <p>Top private universities mein Direct Admission, Scholarships aur Placement ki sahi aur sachi jankari.</p>
+        <div class="hero-btns">
+            <a href="#apply" class="btn-primary">Free Counseling Form</a>
+            <a href="tel:+918789364490" class="btn-outline">Call Now: 8789364490</a>
         </div>
     </header>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="py-16 px-4 container mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-12">Humari Services (Our Services)</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-3xl mb-3">🎓</div>
-                <h3 class="font-bold text-lg mb-2 text-blue-900">Free Counseling</h3>
-                <p class="text-gray-600 text-xs">Aapke interest aur budget ke hisab se sahi course chunne mein madad.</p>
+    <section id="services" class="container">
+        <h2 class="section-title">Humari Services (Our Services)</h2>
+        <div class="section-subtitle">Aapke bright career ke liye sahi guidance</div>
+        <div class="services-grid">
+            <div class="card">
+                <div style="font-size: 30px;">🎓</div>
+                <h3>Free Counseling</h3>
+                <p>Aapke interest aur budget ke hisab se sahi course chunne mein madad.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-3xl mb-3">🏛️</div>
-                <h3 class="font-bold text-lg mb-2 text-blue-900">Direct Admission</h3>
-                <p class="text-gray-600 text-xs">Top private universities aur institutes mein secure admission guidance.</p>
+            <div class="card">
+                <div style="font-size: 30px;">🏛️</div>
+                <h3>Direct Admission</h3>
+                <p>Top private universities aur institutes mein secure admission guidance.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-3xl mb-3">💰</div>
-                <h3 class="font-bold text-lg mb-2 text-blue-900">Scholarship Help</h3>
-                <p class="text-gray-600 text-xs">Merit aur category ke aadhar par fees mein discounts dilwana.</p>
+            <div class="card">
+                <div style="font-size: 30px;">💰</div>
+                <h3>Scholarship Help</h3>
+                <p>Merit aur category ke aadhar par fees mein discounts dilwana.</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
-                <div class="text-3xl mb-3">📑</div>
-                <h3 class="font-bold text-lg mb-2 text-blue-900">Loan Assistance</h3>
-                <p class="text-gray-600 text-xs">Education loan ke liye sahi guidance aur documents ready karwana.</p>
+            <div class="card">
+                <div style="font-size: 30px;">📑</div>
+                <h3>Loan Assistance</h3>
+                <p>Education loan ke liye sahi guidance aur documents ready karwana.</p>
             </div>
         </div>
     </section>
 
     <!-- COURSES SECTION -->
-    <section id="courses" class="bg-gray-100 py-16 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-4">Our Top Programs & Faculties</h2>
-            <p class="text-center text-gray-500 text-sm mb-12">Usha Martin University ke sabhi job-oriented courses ki sahi jankari</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                
-                <!-- 1. Engineering & Applied Sciences -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-900 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-blue-900 mb-3">🛠️ Engineering & Applied Sciences</h3>
-                        <ul class="text-xs space-y-1.5 text-gray-600 font-medium">
-                            <li>• B.Tech (CS / Mechanical / Mining / Civil / EE / ECE)</li>
-                            <li>• B.Tech LE (CS / Mechanical / Mining / Civil)</li>
-                            <li>• B.Tech Civil (Highway & Mobility / High-Rise Design)</li>
-                            <li>• B.Tech Mech (Embedded System / EV Design & Prod.)</li>
-                            <li>• B.Tech (AI & ML / Cyber Security / Data Science)</li>
-                            <li>• Diploma (CS / Civil / EE / ECE / ME / Mining)</li>
-                            <li>• Diploma LE (CS / Civil / EE / ECE / ME)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- 2. Business Management & Commerce -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-900 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-blue-900 mb-3">💼 Management & Commerce</h3>
-                        <ul class="text-xs space-y-1.5 text-gray-600 font-medium">
-                            <li>• Bachelor of Business Administration (BBA)</li>
-                            <li>• BBA (Hons)</li>
-                            <li>• BBA (Business Intelligence & Data Analytics)</li>
-                            <li>• BBA (Banking, Finance & Insurance)</li>
-                            <li>• Master of Business Administration (MBA)</li>
-                            <li>• MBA (Business Intelligence & Data Analytics)</li>
-                            <li class="pt-1.5 font-bold text-blue-900">• Faculty of Commerce:</li>
-                            <li>• B.Com / B.Com (Hons)</li>
-                            <li>• B.Com (Accountancy / Taxation)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 3. Computing & Information Technology -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-900 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-blue-900 mb-3">💻 Computing & Info Tech</h3>
-                        <ul class="text-xs space-y-1.5 text-gray-600 font-medium">
-                            <li>• Bachelor of Computer Application (BCA)</li>
-                            <li>• BCA (Hons)</li>
-                            <li>• BCA (Blockchain / Mobile Computing / Cyber Security)</li>
-                            <li>• Master of Computer Application (MCA)</li>
-                            <li>• MCA (Data Science)</li>
-                            <li>• PGDCA</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- 4. Health & Paramedical Sciences -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-900 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-blue-900 mb-3">🩺 Health & Paramedical</h3>
-                        <ul class="text-xs space-y-1.5 text-gray-600 font-medium">
-                            <li class="font-bold text-blue-900">• Health Sciences:</li>
-                            <li>• D.Pharm / B.Pharm / B.Pharm LE</li>
-                            <li>• Bachelor in Physiotherapy (BPT)</li>
+    <section id="courses" style="background-color: #f3f4f6; padding: 60px 20px;">
+        <h2 class="section-title">Our Top Programs & Faculties</h2>
+        <div class="section-subtitle" style="margin-bottom: 40px;">Usha Martin University ke sabhi job-oriented courses ki sahi jankari</div>
+        
+        <div class="courses-grid">
+            <!-- 1. Engineering & Applied Sciences -->
+            <div class="course-card">
+                <h3>🛠️ Engineering & Applied Sciences</h3>
+                <ul>
+                    <li>• B.Tech (CS / Mechanical / Mining / Civil / EE / ECE)</li>
+                    <li>• B.Tech LE (CS / Mechanical / Mining / Civil)</li>
